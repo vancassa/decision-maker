@@ -9,10 +9,10 @@ const Option = ({
 }) => {
   return (
     <div className="option">
-      <span>{label}</span>
+      <span className="option__label">{label}</span>
       <input
         type="text"
-        className="option_input"
+        className="option__input"
         value={option}
         onChange={(e) => onChange((e.target as HTMLInputElement).value)}
       />
