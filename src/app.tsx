@@ -1,5 +1,4 @@
 import { useState } from "preact/hooks";
-import preactLogo from "./assets/preact.svg";
 import "./app.css";
 import Option from "./option";
 
@@ -19,6 +18,12 @@ export function App() {
     setResult(options[resultIdx]);
   };
 
+  const deleteOption = (index: number) => {
+    const newOptions = [...options];
+    newOptions.splice(index, 1);
+    setOptions(newOptions);
+  };
+
   return (
     <>
       {result ? (
@@ -35,9 +40,12 @@ export function App() {
           <h1 className="title">Make decision for me</h1>
           {options.map((option, i) => (
             <Option
+              key={`${option}_${i}`}
               option={option}
               label={`Option ${i + 1}`}
               onChange={(newValue) => changeOption(i, newValue)}
+              canDelete={i !== 0 && i !== 1}
+              deleteOption={() => deleteOption(i)}
             />
           ))}
           <div className="add_option">
