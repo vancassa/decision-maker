@@ -1,0 +1,64 @@
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.option_input {
+  flex-grow: 1;
+  margin-left: 40px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+.add_option {
+  display: block;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+.add_option:hover {
+  border: none;
+  text-decoration: underline;
+}
+.add_option:focus,
+.add_option:focus-visible {
+  outline: none;
+  text-decoration: underline;
+}
+
+.result {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result__label {
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 56px;
+}
+
+.result__label--bold {
+  font-weight: bold;
+}
+
+.result__button {
+  padding: 16px 24px;
+  font-size: 20px;
+}
